@@ -39,9 +39,9 @@
  + 4 тип: Урон 2HP, имеет 2HP
 
 ## Классы
-Sprites.cs
-Player.cs
-Sword.cs
-Obstacle.cs
+-Sprites.cs
+-Player.cs
+-Sword.cs
+-Obstacle.cs
 
 
