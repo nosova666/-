@@ -1,12 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace bladegame
 {
-    internal class Class1
+    class Obstacle
     {
-    }
+        private Texture2D texture;
+        private Vector2 position;
+        private bool isCollected;
+
+        public Obstacle(Texture2D objectTexture, Vector2 objectPosition)
+        {
+            texture = objectTexture;
+            position = objectPosition;
+            isCollected = false;
+        }
+
+        public bool IsCollected()
+        {
+            return isCollected;
+        }
+
+        public void Collect()
+        {
+            isCollected = true;
+        }
+
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            if (!isCollected)
+            {
+                spriteBatch.Draw(texture, position, Color.White);
+            }
+        }
+    }   
 }

@@ -8,7 +8,7 @@ namespace bladegame
         public Vector2 Velocity;
         public Texture2D Texture { get; set; }
         public float Rotation;
-        public Rectangle BoundingBox => new Rectangle(
+        public Rectangle BoundBox => new Rectangle(
             (int)Position.X,
             (int)Position.Y,
             Texture.Width,
